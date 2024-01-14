@@ -1,3 +1,4 @@
+import '../sass/main.scss';
 const switcher = document.querySelector('#theme-switch-toggle');
 const body = document.querySelector('body');
 

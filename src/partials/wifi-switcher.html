@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wifi Switcher</title>
+</head>
+<body>
+  <p><a href="../index.html">Main</a></p>
+
+  <div class="toolbar">
+    <!-- WiFi connection -->
+    <div class="wifi-switch">
+      <svg class="wifi-switch__icon wifi-icon" role="img" aria-label="WiFi icon">
+        <use href="../images/sprite.svg#WiFi"></use>
+      </svg>
+
+      <div class="wifi-switch__control">
+        <input
+          class="wifi-switch__toggle" 
+          type="checkbox" 
+          name="wifi" 
+          id="wifi-switch-toggle"
+          aria-label="Switch between wifi and airplane mode"/>
+        <label 
+          aria-hidden="true"
+          class="wifi-switch__track"
+          for="wifi-switch-toggle"> </label>
+        <div aria-hidden="true" class="wifi-switch__marker"></div> 
+      </div>
+
+      <svg class="wifi-switch__icon plane-icon" aria-label="Airplane icon">
+        <use href="../images/sprite.svg#airplane"></use>
+      </svg>
+    </div>
+  </div>
+
+  <script src="../js/wifi-switcher.js"></script>
+</body>
+</html>

@@ -1,18 +1,17 @@
-/* THEME SWITCH */
-.theme-switch {
+.wifi-switch {
   display: flex;
   align-items: center;
 }
 
-.theme-switch__icon {
-  color: currentColor;
+.wifi-switch__icon {
+  color: #d3d3d4;
   height: 24px;
   width: 24px;
   margin-right: 8px;
   margin-left: 8px;
 }
 
-.theme-switch__control {
+.wifi-switch__control {
   display: flex;
   align-items: center;
   flex-shrink: 0;
@@ -23,7 +22,7 @@
   padding: 3px 0;
 }
 
-.theme-switch__toggle {
+.wifi-switch__toggle {
   position: absolute;
   left: 0;
   top: 0;
@@ -35,7 +34,7 @@
   pointer-events: none;
 }
 
-.theme-switch__track {
+.wifi-switch__track {
   position: absolute;
   left: 0;
   top: 0;
@@ -43,13 +42,13 @@
   height: 100%;
   color: transparent;
   user-select: none;
-  background-color: #333;
+  background-color: #2196f3;
   border-radius: inherit;
   z-index: 1;
   cursor: pointer;
 }
 
-.theme-switch__marker {
+.wifi-switch__marker {
   position: relative;
   background-color: #fff;
   width: 26px;
@@ -62,16 +61,22 @@
   transition: transform 250ms var(--timing-function);
 }
 
-.theme-switch__toggle:checked + .theme-switch__track {
-  background-color: #d3d3d4;
+.wifi-switch__toggle:checked + .wifi-switch__track {
+  background-color: #db4a11;
 }
 
-.theme-switch__toggle:checked ~ .theme-switch__marker {
+.wifi-switch__toggle:checked ~ .wifi-switch__marker {
   transform: translateX(35px);
 }
 
-.theme-switch__toggle:focus + .theme-switch__track,
-.theme-switch__toggle:active + .theme-switch__track {
+.wifi-switch__toggle:focus + .wifi-switch__track,
+.wifi-switch__toggle:active + .wifi-switch__track {
   box-shadow: 0 0 0 3px #2196f3;
 }
 
+// .wifi-active {
+//   color: #2196f3;
+// }
+// .plane-active {
+//   color: #db4a11;
+// }
