@@ -10,6 +10,14 @@
   margin-right: 8px;
   margin-left: 8px;
 }
+.marker-image {
+  color: #86adce;
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+  margin-left: 8px;
+  transform: translateX(-8px);
+}
 
 .wifi-switch__control {
   display: flex;
