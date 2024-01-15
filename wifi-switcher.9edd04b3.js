@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"B930":[function(require,module,exports) {
 "use strict";require("../sass/main.scss");const e=document.querySelector("#wifi-switch-toggle"),t=document.querySelector('svg[aria-label="WiFi icon"]'),a=document.querySelector('svg[aria-label="Airplane icon"]'),{onWifi:s,onPlane:i}={onWifi:"wifi-active",onPlane:"plane-active"};let c=localStorage.getItem("page-state")||s;function l(){a.classList.toggle(i),t.classList.toggle(s),c=c===i?s:i,localStorage.setItem("page-state",c)}e.checked=localStorage.getItem("page-state")===i,t.classList.add(s),c===i&&(a.classList.add(i),t.classList.remove(s)),e.addEventListener("change",l);
 },{"../sass/main.scss":"clu1"}]},{},["B930"], null)
-//# sourceMappingURL=/themes-switcher/wifi-switcher.15aac95a.js.map
+//# sourceMappingURL=/themes-switcher/wifi-switcher.9edd04b3.js.map
