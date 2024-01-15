@@ -4,21 +4,24 @@ const switcher = document.querySelector('#wifi-switch-toggle');
 const wifiIcon = document.querySelector('svg[aria-label="WiFi icon"]');
 const planeIcon = document.querySelector('svg[aria-label="Airplane icon"]');
 
-const stats = {
+const {onWifi, onPlane} = {
   onWifi: 'wifi-active',
   onPlane: 'plane-active'
 }
 
-let pageStat = localStorage.getItem('page-state') || stats.onWifi;
-switcher.checked = localStorage.getItem('page-state') === stats.onPlane;
-wifiIcon.classList.add(pageStat);
-// planeIcon.classList.add(stats.onPlane);
+let pageStat = localStorage.getItem('page-state') || onWifi;
+switcher.checked = localStorage.getItem('page-state') === onPlane;
+wifiIcon.classList.add(onWifi);
 
+if (pageStat === onPlane) {
+  planeIcon.classList.add(onPlane);
+  wifiIcon.classList.remove(onWifi);
+} 
 
 function statChanger() {
-  wifiIcon.classList.toggle(pageStat);
-  pageStat = pageStat === stats.onPlane ? stats.onWifi : stats.onPlane;
-  wifiIcon.classList.add(pageStat);
+  planeIcon.classList.toggle(onPlane);
+  wifiIcon.classList.toggle(onWifi);
+  pageStat = pageStat === onPlane ? onWifi : onPlane;
   localStorage.setItem('page-state', pageStat);
 }
 
